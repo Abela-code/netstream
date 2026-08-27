@@ -1,0 +1,53 @@
+.title {
+  color: white;
+  margin: 0 0 8px 0;
+}
+
+.Row {
+  position: relative;
+}
+
+.Row :global(.swiper) {
+  height: 265px;
+  padding: 0 73px;
+  overflow: visible;
+}
+
+.Row :global(.swiper-wrapper) {
+  overflow: visible;
+}
+
+.Row :global(.swiper-slide) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.Row :global(.swiper-slide:hover) {
+  z-index: 10;
+}
+
+.Row :global(.swiper-button-prev),
+.Row :global(.swiper-button-next) {
+  background: transparent !important;
+  color: white !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Row :global(.swiper-button-prev::after),
+.Row :global(.swiper-button-next::after) {
+  font-size: 14px !important;
+}
+
+.Row:hover :global(.swiper-button-prev),
+.Row:hover :global(.swiper-button-next) {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #000000;
+  font-family: "Roboto", sans-serif;
+}/*  to remove the edge space */
+
+.banner {
+  color: white;
+  min-height: 70vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.contents {
+  padding-left: 15px;
+  padding-top: 330px;
+  animation: bannerContentFade 1.3s ease-out;
+}
+
+@keyframes bannerContentFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoImg {
+  width: 150px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  padding-bottom: 0.3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  padding-top: 0.5rem;
+  max-width: 740px;
+  margin: 0;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem ;
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  color: black;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: white;
+    transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  color: white;
+  background-color: rgba(51, 51, 51, 0.5);
+  transform: scale(1.04);
+}
+
+.fadeBottom {
+  height: 10rem;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(17, 17, 17, 0.35) 35%,
+    rgba(17, 17, 17, 0.75) 70%,
+    #111 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .contents {
+    padding-top: 220px;
+    animation-duration: 0.6s;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 18px;
+    max-width: 90%;
+  }
+
+  .logoImg {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contents {
+    padding-top: 180px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+
+
