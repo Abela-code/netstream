@@ -29,7 +29,7 @@ npm install
 `.env` already contains your TMDB key:
 
 ```
-VITE_API_KEY=add your api key from google gemini
+VITE_API_KEY=add your TMDB key
 ```
 
 ### 3. Firebase Console (important!)
