@@ -29,12 +29,12 @@ npm install
 `.env` already contains your TMDB key:
 
 ```
-VITE_API_KEY=4132a53f706dde0b31c09c06c78a2d9b
+VITE_API_KEY=add your api key from google gemini
 ```
 
 ### 3. Firebase Console (important!)
 
-1. Go to [Firebase Console](https://console.firebase.google.com) → your project `netflix-clone-8feca`
+1. Go to [Firebase Console](https://console.firebase.google.com) → your project 
 2. **Authentication** → Sign-in method → Enable **Email/Password** and **Google**
 3. **Firestore Database** → Create database (start in **test mode** for development)
 4. (Optional) Add your domain to authorized domains under Authentication → Settings
