@@ -1,0 +1,168 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-h);
+  transition: background 0.35s ease;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+}
+
+.scrolled {
+  background: #0a0a0a;
+}
+
+.inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #e50914;
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+
+.links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: nowrap;
+}
+
+.links a {
+  font-size: 0.875rem;
+  color: #e5e5e5;
+  transition: color 0.2s;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.links a:hover,
+.links a.active {
+  color: #fff;
+  font-weight: 500;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.iconBtn {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: opacity 0.2s;
+}
+
+.iconBtn:hover {
+  opacity: 0.75;
+}
+
+.profileMenu {
+  position: relative;
+}
+
+.profileBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: rgba(0, 0, 0, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  min-width: 200px;
+  padding: 8px 0;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdownItem img {
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 6px 0;
+}
+
+@media (max-width: 1100px) {
+  .links {
+    gap: 12px;
+  }
+  .links a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,32 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.rows {
+  margin-top: -80px;
+  position: relative;
+  z-index: 5;
+  padding-bottom: 40px;
+}
+
+.footer {
+  padding: 40px 4%;
+  text-align: center;
+  color: #555;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0 4% 8px;
+  color: #fff;
+}
+
+.langNote {
+  padding: 0 4% 16px;
+  color: #b3b3b3;
+  font-size: 0.95rem;
+}

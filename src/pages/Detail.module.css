@@ -1,0 +1,160 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 60px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--bg) 0%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 100%
+  );
+}
+
+.back {
+  position: absolute;
+  top: calc(var(--header-h) + 16px);
+  left: 4%;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.back:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 0 4%;
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: #e5e5e5;
+  flex-wrap: wrap;
+}
+
+.score {
+  color: #46d369;
+  font-weight: 700;
+}
+
+.hd {
+  border: 1px solid #808080;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.overview {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #e5e5e5;
+  margin-bottom: 24px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.play {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.play:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.listBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(109, 109, 110, 0.7);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.listBtn:hover {
+  background: rgba(109, 109, 110, 0.5);
+}
+
+.genres {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+
+.genres strong {
+  color: #808080;
+}
+
+.recs {
+  padding: 20px 0 60px;
+}
+
+.notFound {
+  padding-top: 120px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #808080;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding-bottom: 40px;
+  }
+}
